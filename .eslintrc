@@ -1,0 +1,34 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react-hooks"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "React": true,
+    "document": true,
+    "window": true
+  },
+  // Defining global variables
+  "env": {
+    "es6": true,
+    // Browser Global variables example: Not put error on async/await.
+    "browser": true,
+    // Node.js global variables and Node.js scoping. window, document setTimeout
+    "node": true
+    // https, require
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
